@@ -1,2 +1,5 @@
 Templates for local bootup rc scripts.
 
+These scripts are not tied to any
+particular init system.
+
