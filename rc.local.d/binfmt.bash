@@ -1,4 +1,4 @@
-# -*- shell-script -*-
+#!/bin/bash
 
 # Register additional binary formats
 # Suppressed with no-binfmt in the kernel command line

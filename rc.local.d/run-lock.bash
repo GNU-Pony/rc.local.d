@@ -1,4 +1,4 @@
-# -*- shell-script -*-
+#!/bin/bash
 
 # Give members of the lock group write access to /run/lock
 # Suppressed with no-run-lock in the kernel command line

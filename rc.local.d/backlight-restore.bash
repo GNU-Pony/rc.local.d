@@ -1,4 +1,4 @@
-# -*- shell-script -*-
+#!/bin/bash
 
 # Restore the backlight of the last session
 # Suppressed with no-backlight-restore in the kernel command line

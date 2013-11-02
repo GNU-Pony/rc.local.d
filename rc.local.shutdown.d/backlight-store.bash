@@ -1,4 +1,4 @@
-# -*- shell-script -*-
+#!/bin/bash
 
 # Store the backlight of the last session
 # Suppressed with no-backlight-store in the kernel command line

@@ -1,4 +1,4 @@
-# -*- shell-script -*-
+#!/bin/bash
 
 # Select a random SYSLINUX configuration for next boot
 # Suppressed with no-syslinux-conf in the kernel command line

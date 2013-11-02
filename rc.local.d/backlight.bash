@@ -1,4 +1,4 @@
-# -*- shell-script -*-
+#!/bin/bash
 
 # Set backlight to 50 % on all devices
 # Suppressed with no-backlight in the kernel command line
