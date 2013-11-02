@@ -1,0 +1,9 @@
+RUNTIME DEPENDENCIES:
+	bash
+
+
+BUILD DEPENDENCIES:
+	gpp
+	make
+	coreutils
+
