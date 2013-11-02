@@ -5,10 +5,22 @@
 
 
 PREFIX = /usr
-DATA = /share
 SYSCONF = /etc
+PROC = /proc
+SYS = /sys
+RUN = /run
+RUN_LOCK = $(RUN)/lock
+DEV = /dev
+VAR = /var
+VAR_LIB = $(VAR)/lib
+DATA = /share
 LICENSES = $(DATA)/licenses
+
 PKGNAME = rc.local.d
+GPP = gpp
+
+GPP_VARS = ETC=$(SYSCONF) PROC=$(PROC) RUN=$(RUN) RUN_LOCK=$(RUN_LOCK) SYS=$(SYS) DEV=$(DEV) VAR_LIB=$(VAR_LIB)
+GPP_FLAGS = -s "£" $(foreach D, $(GPP_VARS), -D $(D))
 
 
 LATE = backlight-restore backlight binfmt run-lock syslinux-conf
@@ -27,10 +39,10 @@ all-shutdown: $(foreach S, $(SHUTDOWN), rc.local.shutdown.d/$(S))
 
 
 rc.local.d/%: rc.local.d/%.bash
-	cp "$<" "$@"
+	$(GPP) $(GPP_FLAGS) -i "$<" -o "$@"
 
 rc.local.shutdown.d/%: rc.local.shutdown.d/%.bash
-	cp "$<" "$@"
+	$(GPP) $(GPP_FLAGS) -i "$<" -o "$@"
 
 
 .PHONY: install
