@@ -23,7 +23,7 @@ GPP_VARS = ETC=$(SYSCONF) PROC=$(PROC) RUN=$(RUN) RUN_LOCK=$(RUN_LOCK) SYS=$(SYS
 GPP_FLAGS = -s "£" $(foreach D, $(GPP_VARS), -D $(D))
 
 
-LATE = backlight-restore backlight binfmt run-lock syslinux-conf cursor-blink cursor-block vt-colours
+LATE = backlight-restore backlight binfmt run-lock syslinux-conf cursor-blink cursor-block vt-colours sysctl
 SHUTDOWN = backlight-store
 
 
