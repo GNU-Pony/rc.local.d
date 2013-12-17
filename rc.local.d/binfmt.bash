@@ -2,6 +2,14 @@
 
 # Register additional binary formats
 # Suppressed with no-binfmt in the kernel command line
+
+# Documention about binfmt:
+#   £{USR_SRC}/linux-*/Documentation/binfmt_misc.txt
+
+# This script will load all files inside £{ETC}/binfmt.d,
+# and load each line therein that does not start ; or #,
+# or is empty. Leading and trialing whitespace is ignored.
+
  
 bf_do=1
 for _w in $(cat "£{PROC}/cmdline"); do

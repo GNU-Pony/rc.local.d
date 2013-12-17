@@ -14,6 +14,7 @@ DEV = /dev
 VAR = /var
 VAR_LIB = $(VAR)/lib
 DATA = /share
+USR_SRC = /usr/src
 LICENSES = $(DATA)/licenses
 
 PKGNAME = rc.local.d
