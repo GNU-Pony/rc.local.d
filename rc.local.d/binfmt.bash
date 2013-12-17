@@ -20,11 +20,13 @@ if [ $bf_do = 1 ]; then
 	
 	# Register binary formats
 	for binfmt in $(find -L "£{ETC}/binfmt.d" -type -f | grep -v '~$'); do
-	    while read -r line; do
-		if [ ! ${line:0:1} = '#' ]; then
-		    echo "${line}" > "£{PROC}/fs/binfmt_misc/register"
-		fi
-	    done < "${binfmt}"
+	    cat "${binfmt}" |
+	        grep -v '^\(;\|#\)' |
+		while read -r line; do
+		    if [ ! "${line}" = '' ]; then
+			echo "${line}" > "£{PROC}/fs/binfmt_misc/register"
+		    fi
+		done
 	done
     fi
 fi
