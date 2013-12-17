@@ -1,11 +1,13 @@
 RUNTIME DEPENDENCIES:
 	bash
+	coreutils
 
 
 SCRIPT-SPECIFIC RUNTIME DEPENDENCIES:
 	linux
 	findutils
 	kbd
+	util-linux
 
 
 BUILD DEPENDENCIES:
