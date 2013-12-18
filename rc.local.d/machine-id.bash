@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Generate a unique machine identifier if missing
+# Generate a unique machine identifier, if missing, and apply it
 # Suppressed with no-machid in the kernel command line
 
  
@@ -16,5 +16,6 @@ if [ $mi_do = 1 ]; then
     if [ ! -f "£{ETC}/machine-id" ]; then
 	uuidgen | tr -d - > "£{ETC}/machine-id"
     fi
+    sysctl -w kern.hostid="$(cat "£{ETC}/machine-id")"
 fi
 
