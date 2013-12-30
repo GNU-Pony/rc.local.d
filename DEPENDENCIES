@@ -8,6 +8,7 @@ SCRIPT-SPECIFIC RUNTIME DEPENDENCIES:
 	findutils
 	kbd
 	util-linux
+	posixtime (from the miscellaneous git repository)
 
 
 BUILD DEPENDENCIES:
