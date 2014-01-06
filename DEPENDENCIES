@@ -9,6 +9,7 @@ SCRIPT-SPECIFIC RUNTIME DEPENDENCIES:
 	kbd
 	util-linux
 	posixtime (from the miscellaneous git repository)
+	ntp
 
 
 BUILD DEPENDENCIES:
