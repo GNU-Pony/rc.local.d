@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Uses the Network Time Protocol via `ntpdate` to syncronise clock
+# Uses the Network Time Protocol via `ntpdate` to synchronise clock
 # Suppressed with no-ntpdate in the kernel command line
 
  
