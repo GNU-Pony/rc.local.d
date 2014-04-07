@@ -26,8 +26,8 @@ GPP_FLAGS = -s "£" $(foreach D, $(GPP_VARS), -D $(D))
 
 LATE = backlight-restore backlight binfmt run-lock syslinux-conf cursor-blink \
        cursor-block vt-colours sysctl machine-id quota kbdrate deallocate-tty \
-       clock-restore ntpdate
-SHUTDOWN = backlight-store clock-store
+       clock-restore ntpdate mixer-restore
+SHUTDOWN = backlight-store clock-store mixer-store
 
 
 

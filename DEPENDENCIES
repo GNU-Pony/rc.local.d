@@ -10,6 +10,7 @@ SCRIPT-SPECIFIC RUNTIME DEPENDENCIES:
 	util-linux
 	posixtime (from the miscellaneous git repository)
 	ntp
+	alaa-utils
 
 
 BUILD DEPENDENCIES:
